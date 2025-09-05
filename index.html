@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Paginis</title>
+  <title>Handbook RENDE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/assets/paginis.svg" alt="icon svg">
 
@@ -17,7 +17,7 @@
 
 <body class="bg-gray-900 text-white">
 
-  <div class="fixed top-4 right-4 z-50">
+  <div class="hidden fixed top-4 right-4 z-50">
     <a href="https://github.com/ibra-kdbra/Paginis" target="_blank" class="flex items-center px-4 py-2 bg-[#4B3C3C] 
     text-[#EAEAEA] border border-[#8B6F6F] rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">
       <i class="fab fa-github mr-2"></i>
@@ -26,7 +26,7 @@
   </div>
 
   <!-- Toggle Direction Button placed under GitHub Button -->
-  <div class="fixed top-20 right-4 z-50">
+  <div class="hidden fixed top-20 right-4 z-50 ">
     <button id="toggleDirectionBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
     rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">
       Toggle Direction
@@ -34,15 +34,15 @@
   </div>
 
   <!-- Button to toggle the quote note panel visibility -->
-  <div class="fixed top-4 left-4 z-100 flex space-x-2">
-    <button id="toggleQuotePanelBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
+  <div class="hidden fixed top-4 left-4 z-100 flex space-x-2">
+    <button id="toggleQuotePanelBtn" class=" hidden px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
     rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Quotes</button>
-    <button id="exportQuotesBtn" class="px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
+    <button id="exportQuotesBtn" class="hidden px-4 py-2 bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
     rounded-lg shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Export Quotes</button>
   </div>
 
   <!-- Quote Notes Panel -->
-  <div id="quoteNotesPanel" class="fixed top-0 left-0 p-4 bg-gray-800 text-white rounded-bl-lg shadow-lg z-90 hidden">
+  <div id="quoteNotesPanel" class="hidden fixed top-0 left-0 p-4 bg-gray-800 text-white rounded-bl-lg shadow-lg z-90 hidden">
     <h3 class="text-lg mb-2">Quote Notes</h3>
 
     <div class="mb-4 flex items-center mt-4">
@@ -59,12 +59,12 @@
 
   <!-- Button to toggle the input panel visibility -->
   <div class="fixed bottom-4 left-4 z-50">
-    <button id="togglePanelBtn" class="bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
+    <button id="togglePanelBtn" class="hidden bg-[#4B3C3C] text-[#EAEAEA] border border-[#8B6F6F] 
     rounded-lg px-4 py-2 shadow-md transition duration-300 hover:bg-[#3E3232] hover:text-white">Hide Options</button>
   </div>
 
   <!-- Input panel to choose PDF source and load the PDF -->
-  <div id="inputPanel">
+  <div id="inputPanel" class="hidden">
     <!-- Dropdown to select between URL or local PDF -->
     <div class="flex justify-center mb-4">
       <select id="pdfSource" class="px-4 py-2 border border-gray-400 rounded-lg bg-white text-black w-full">
