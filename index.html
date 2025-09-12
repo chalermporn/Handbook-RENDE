@@ -182,7 +182,7 @@
 
       try {
         // Create URL with parameters
-        const url = new URL('https://script.google.com/macros/s/AKfycbzz_MCu1JzhhxB4QAE_ZhOXON0YWG-bv74BGXDN4w6osE35OoTvkxXob_oeumh8aR2Ddg/exec');
+        const url = new URL('https://script.google.com/macros/s/AKfycbznhVzt_LDI3qZiJQ08P74RNxuHtTn4P_Om2wl8h6gWSg0VqZw-vRwXBvMCu3uFv4xZ/exec');
         url.searchParams.append('action', 'login');
         url.searchParams.append('username', username);
 
@@ -191,7 +191,7 @@
 
         if (data.success) {
           // Store user type and PDF file in sessionStorage
-          sessionStorage.setItem('userType', data.bu);
+          sessionStorage.setItem('userType', data.pdf);
           sessionStorage.setItem('pdfFile', data.pdfFile);
 
           // Hide login form and show main content
@@ -200,7 +200,7 @@
 
           // Trigger PDF loading based on user type
           if (typeof setUserType === 'function') {
-            setUserType(data.bu);
+            setUserType(data.pdf);
           }
 
           loginError.classList.add('hidden');
